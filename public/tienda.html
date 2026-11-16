@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda y Catálogo de Productos 3D | AIMPRIMIR3D</title>
+  <meta name="description" content="Catálogo de productos impresos en 3D en República Dominicana: soportes ergonómicos, engranajes y repuestos a medida, artículos corporativos y figuras en resina.">
+  
+  <link rel="icon" type="image/png" href="assets/img/logo.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-3">
+          <a href="tel:+18494622228"><i class="fas fa-phone-alt"></i> (849) 462-2228</a>
+          <span class="d-none d-sm-inline text-muted">|</span>
+          <a href="mailto:info.aimprimir3d@gmail.com"><i class="fas fa-envelope"></i> info.aimprimir3d@gmail.com</a>
+        </div>
+        <div class="d-none d-md-flex align-items-center gap-3">
+          <span class="text-white-50"><i class="fas fa-box-open text-warning me-1"></i> Pedidos y Lotes con Despacho a Todo el País</span>
+          <a href="https://www.instagram.com/aimprimir3d/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> @aimprimir3d</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logonombre.png" alt="AIMPRIMIR3D">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios y Materiales</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/aimprimir3d?vrfl=MWt5dHZ5N2p3MTFwYQ%3D%3D" target="_blank" rel="noopener">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tienda.html">Tienda / Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a href="contacto.html" class="btn-nav-cta text-decoration-none">
+              <i class="fas fa-calculator me-1"></i> Cotizar Proyecto
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <div class="container">
+      <span class="section-badge">Catálogo y Pedidos</span>
+      <h1>Catálogo de Piezas y Soluciones 3D</h1>
+      <p>
+        Modelos de alta demanda, repuestos frecuentes y diseños optimizados listos para fabricación bajo demanda y envíos a toda República Dominicana.
+      </p>
+    </div>
+  </header>
+
+  <!-- SECCIÓN TIENDA Y FILTROS -->
+  <section class="section-padding">
+    <div class="container">
+      
+      <!-- AVISO DE PRE-TIENDA ESCALABLE -->
+      <div class="alert alert-primary bg-primary bg-opacity-10 border-primary border-opacity-25 rounded-4 p-4 mb-5 d-flex align-items-center gap-3">
+        <i class="fas fa-store-alt fa-2x text-primary d-none d-sm-block"></i>
+        <div>
+          <h6 class="fw-bold text-primary mb-1">Próximamente: Tienda Online Automatizada</h6>
+          <p class="small text-muted mb-0">
+            Estamos preparando nuestra pasarela de compra digital instantánea con carrito. Actualmente puedes solicitar cualquiera de estos productos con especificaciones personalizadas seleccionándolo a continuación.
+          </p>
+        </div>
+      </div>
+
+      <!-- BARRA DE BÚSQUEDA Y FILTROS -->
+      <div class="row g-3 align-items-center mb-5">
+        <div class="col-lg-5">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0 rounded-start-pill ps-3">
+              <i class="fas fa-search text-muted"></i>
+            </span>
+            <input type="text" id="store-search-input" class="form-control border-start-0 rounded-end-pill py-2" placeholder="Buscar por nombre, repuesto, soporte o material...">
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+            <button class="portfolio-filter-btn store-filter-btn active" data-category="all">Todos</button>
+            <button class="portfolio-filter-btn store-filter-btn" data-category="mecanica">Mecánica</button>
+            <button class="portfolio-filter-btn store-filter-btn" data-category="organizacion">Soportes</button>
+            <button class="portfolio-filter-btn store-filter-btn" data-category="corporativo">Corporativo</button>
+            <button class="portfolio-filter-btn store-filter-btn" data-category="prototipos">Prototipos</button>
+            <button class="portfolio-filter-btn store-filter-btn" data-category="arte">Arte y Resina</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRILLA DINÁMICA DE PRODUCTOS (CONTROLADA POR store-catalog.js) -->
+      <div class="row g-4" id="store-products-grid">
+        <!-- Renderizado por JS -->
+      </div>
+
+      <!-- BANNER DE PIEZA PERSONALIZADA -->
+      <div class="p-5 mt-5 bg-light rounded-4 border text-center">
+        <span class="section-badge">¿No ves lo que necesitas?</span>
+        <h3 class="fw-bold mb-2">Fabricamos cualquier pieza desde cero</h3>
+        <p class="text-muted max-w-700 mx-auto mb-4">
+          Si requieres una pieza con medidas personalizadas, un archivo propio o una recreación de una pieza que se te rompió, utiliza nuestro cotizador personalizado.
+        </p>
+        <a href="contacto.html" class="btn btn-primary-custom btn-lg">
+          <i class="fas fa-sliders-h me-2"></i> Abrir Cotizador a Medida
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 mb-3">
+          <img src="assets/img/logonombre.png" alt="AIMPRIMIR3D" width="200" class="mb-3" style="filter: brightness(0) invert(1);">
+          <p class="small text-light">
+            Taller especializado en diseño, prototipado y fabricación aditiva de precisión. Transformamos necesidades mecánicas, proyectos y conceptos en piezas reales en República Dominicana.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Navegación</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios y Materiales</a></li>
+            <li><a href="https://www.instagram.com/aimprimir3d?vrfl=MWt5dHZ5N2p3MTFwYQ%3D%3D" target="_blank" rel="noopener">Portafolio (Instagram)</a></li>
+            <li><a href="tienda.html">Tienda / Catálogo</a></li>
+            <li><a href="contacto.html">Contacto y Cotizador</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5>Especialidades</h5>
+          <ul class="footer-links">
+            <li><a href="servicios.html#mecanica">Repuestos de Maquinaria</a></li>
+            <li><a href="servicios.html#prototipado">Prototipado Rápido</a></li>
+            <li><a href="servicios.html#ingenieria">Ingeniería Inversa CAD</a></li>
+            <li><a href="servicios.html#materiales">Guía de Materiales Técnicos</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Contacto</h5>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+18494622228">(849) 462-2228</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info.aimprimir3d@gmail.com">info.aimprimir3d@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        © <span id="current-year">2026</span> AIMPRIMIR3D. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/18494622228" target="_blank" rel="noopener" class="whatsapp-float-btn">
+    <div class="pulse-ring"></div>
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/store-catalog.js"></script>
+</body>
+</html>

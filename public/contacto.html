@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotizador y Contacto Directo | AIMPRIMIR3D</title>
+  <meta name="description" content="Cotiza la fabricación de tu pieza 3D, prototipo o repuesto mecánico. Diagnóstico rápido, opciones de urgencia y atención personalizada en República Dominicana.">
+  
+  <link rel="icon" type="image/png" href="assets/img/logo.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-3">
+          <a href="tel:+18494622228"><i class="fas fa-phone-alt me-1 text-primary-light"></i> (849) 462-2228</a>
+          <span class="d-none d-sm-inline text-muted opacity-50">|</span>
+          <a href="mailto:info.aimprimir3d@gmail.com"><i class="fas fa-envelope me-1 text-primary-light"></i> info.aimprimir3d@gmail.com</a>
+        </div>
+        <div class="d-none d-md-flex align-items-center gap-3">
+          <span class="text-white-50"><i class="fas fa-map-marker-alt text-warning me-1"></i> Taller en Bahoruco • Envíos a Toda República Dominicana</span>
+          <a href="https://www.instagram.com/aimprimir3d/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> @aimprimir3d</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand py-0" href="index.html">
+        <img src="assets/img/logonombre.png" alt="AIMPRIMIR3D">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios y Materiales</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/aimprimir3d?vrfl=MWt5dHZ5N2p3MTFwYQ%3D%3D" target="_blank" rel="noopener">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda / Catálogo</a></li>
+          <li class="nav-item active"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a href="tel:+18494622228" class="btn-nav-cta text-decoration-none">
+              <i class="fas fa-phone-alt"></i> Llamar al Taller
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER COMPACTO Y ELEGANTE -->
+  <header class="page-header py-4">
+    <div class="container">
+      <span class="section-badge">Atención Directa y Cotización</span>
+      <h1 class="h2 fw-bold text-primary mb-2">Cotiza tu Proyecto o Pieza 3D</h1>
+      <p class="text-muted small max-w-650 mx-auto mb-0">
+        Cuéntanos qué necesitas resolver. Evaluamos viabilidad, materiales técnicos y te entregamos una propuesta clara con opciones de tiempo y presupuesto.
+      </p>
+    </div>
+  </header>
+
+  <!-- SECCIÓN PRINCIPAL -->
+  <section class="section-padding bg-subtle">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        
+        <!-- COLUMNA IZQUIERDA: FORMULARIO DE COTIZACIÓN -->
+        <div class="col-lg-8">
+          <div class="quote-box">
+            
+            <form id="quote-diagnostic-form" action="https://formsubmit.co/info.aimprimir3d@gmail.com" method="POST">
+              <!-- Configuración FormSubmit -->
+              <input type="hidden" name="_subject" value="🔔 Nueva Solicitud de Cotización Técnica - AIMPRIMIR3D">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
+
+              <!-- CAMPOS OCULTOS PARA EL CÁLCULO FINANCIERO INTERNO (SOLO PARA TI) -->
+              <input type="hidden" name="_CALCULO_PISO_TECNICO_RD" id="hidden-piso-tecnico" value="">
+              <input type="hidden" name="_CALCULO_PRECIO_SUGERIDO_RD" id="hidden-precio-sugerido" value="">
+              <input type="hidden" name="_MULTIPLICADOR_URGENCIA" id="hidden-urgencia-mult" value="">
+              <input type="hidden" name="_DIAGNOSTICO_LEAD" id="hidden-diagnostico-lead" value="">
+              <input type="hidden" name="_ESTRATEGIA_INTERNA_SUGERIDA" id="hidden-estrategia" value="">
+              <input type="hidden" name="_CODIGO_TECNICO_REFERENCIA" id="hidden-codigo-interno" value="">
+              <input type="hidden" name="_MATERIAL_SUGERIDO" id="hidden-desglose-material" value="">
+              <input type="hidden" name="_COSTO_DISENO_INCLUIDO" id="hidden-desglose-diseno" value="">
+
+              <!-- PASO 1: DATOS DE CONTACTO -->
+              <div class="quote-step-header">
+                <div class="step-badge">1</div>
+                <div>
+                  <h6 class="fw-bold mb-0">Tus Datos de Contacto</h6>
+                  <small class="text-muted">Para enviarte la propuesta formal y contactarte directamente.</small>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label class="form-label-custom">Nombre Completo *</label>
+                  <input type="text" name="cliente_nombre" id="field-nombre" class="form-control" placeholder="Ej: Carlos Pérez" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-custom">Teléfono / WhatsApp *</label>
+                  <input type="tel" name="cliente_telefono" id="field-telefono" class="form-control" placeholder="Ej: (809) 555-0199" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-custom">Correo Electrónico *</label>
+                  <input type="email" name="cliente_correo" id="field-correo" class="form-control" placeholder="carlos@correo.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-custom">Ciudad / Provincia para Envío *</label>
+                  <select name="cliente_ubicacion" class="form-select" required>
+                    <option value="Bahoruco / Neiba">Bahoruco / Neiba (Entrega local)</option>
+                    <option value="Barahona">Barahona</option>
+                    <option value="Santo Domingo / Distrito Nacional">Santo Domingo / D.N.</option>
+                    <option value="Santiago">Santiago</option>
+                    <option value="San Cristóbal">San Cristóbal</option>
+                    <option value="La Vega / Bonao">La Vega / Bonao</option>
+                    <option value="Otra Provincia">Otra Provincia (Envío nacional)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- PASO 2: EL PROBLEMA Y ESTADO DEL DISEÑO -->
+              <div class="quote-step-header">
+                <div class="step-badge">2</div>
+                <div>
+                  <h6 class="fw-bold mb-0">¿Qué problema necesitas resolver?</h6>
+                  <small class="text-muted">Cuéntanos sobre la pieza o proyecto que deseas fabricar.</small>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label class="form-label-custom">Tipo de Solicitud *</label>
+                  <select name="tipo_solicitud" id="field-tipo-solicitud" class="form-select" required>
+                    <option value="repuesto_mecanico">Reemplazo de pieza rota / Repuesto mecánico</option>
+                    <option value="prototipo_funcional">Prototipo funcional / Validación de producto</option>
+                    <option value="serie_lote">Producción en serie / Lote con marca</option>
+                    <option value="arte_resina">Figura de colección / Pieza en resina alta definición</option>
+                    <option value="soporte_organizacion">Soporte personalizado / Organización</option>
+                    <option value="producto_catalogo">Producto visto en catálogo / tienda</option>
+                    <option value="otro">Otro proyecto a medida</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label-custom">¿Cuentas con archivo 3D? *</label>
+                  <select name="estado_archivo_3d" id="field-archivo-3d" class="form-select" required>
+                    <option value="tengo_stl">Sí, tengo el archivo 3D (STL, OBJ, STEP)</option>
+                    <option value="tengo_pieza_fisica">No, pero tengo la pieza física rota / medidas</option>
+                    <option value="solo_idea">No, solo tengo fotos o la idea (Requiere diseño)</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">Descripción de la Pieza o Necesidad *</label>
+                  <textarea name="descripcion_proyecto" id="field-descripcion" rows="3" class="form-control" placeholder="Describe brevemente qué función cumplirá la pieza, qué máquina la usa o qué problema te está ocasionando..." required></textarea>
+                </div>
+              </div>
+
+              <!-- PASO 3: ESPECIFICACIONES Y PRESUPUESTO -->
+              <div class="quote-step-header">
+                <div class="step-badge">3</div>
+                <div>
+                  <h6 class="fw-bold mb-0">Especificaciones y Presupuesto</h6>
+                  <small class="text-muted">Nos ayuda a evaluar alternativas de costo vs durabilidad.</small>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-4">
+                  <label class="form-label-custom">Cantidad</label>
+                  <input type="number" name="cantidad_piezas" id="field-cantidad" class="form-control" value="1" min="1">
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label-custom">Tamaño Aprox.</label>
+                  <select name="tamano_estimado" id="field-tamano" class="form-select">
+                    <option value="pequeno">Pequeño (< 10 cm)</option>
+                    <option value="mediano" selected>Mediano (10 a 25 cm)</option>
+                    <option value="grande">Grande (> 25 cm)</option>
+                    <option value="serie">Lote o varias piezas</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label-custom">Condición de Uso</label>
+                  <select name="condicion_uso" id="field-uso-pieza" class="form-select">
+                    <option value="general" selected>Interior / Decorativo (PLA)</option>
+                    <option value="mecanico_calor">Fricción / Calor / Exterior (PETG/ABS)</option>
+                    <option value="flexible">Flexible / Goma (TPU)</option>
+                    <option value="resina_detalle">Ultra Detalle / Joyería (Resina)</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label-custom">¿Cuánto te cuesta este problema hoy? (RD$ aprox.)</label>
+                  <input type="number" name="costo_problema_actual_rd" id="field-costo-problema" class="form-control" placeholder="Ej: 6000 (Opcional)">
+                  <small class="text-muted" style="font-size: 11px;">Lo que costaría importar el repuesto original o la pérdida que genera.</small>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label-custom">Presupuesto Estimado Disponible (RD$)</label>
+                  <input type="number" name="presupuesto_disponible_rd" id="field-presupuesto" class="form-control" placeholder="Ej: 2500 (Opcional)">
+                  <small class="text-muted" style="font-size: 11px;">Nos permite sugerirte el material más económico y viable.</small>
+                </div>
+              </div>
+
+              <!-- PASO 4: TIEMPO DESEADO (REGLA MENOR TIEMPO = MAYOR COSTO) -->
+              <div class="quote-step-header">
+                <div class="step-badge">4</div>
+                <div>
+                  <h6 class="fw-bold mb-0">Tiempo Deseado de Entrega</h6>
+                  <small class="text-muted">A menor tiempo de fabricación y despacho, aplica ajuste de urgencia por prioridad de máquinas.</small>
+                </div>
+              </div>
+
+              <div class="urgency-grid">
+                <!-- Express -->
+                <label class="urgency-option">
+                  <input type="radio" name="tiempo_entrega" value="express">
+                  <div class="urgency-card-ui">
+                    <div class="urgency-header">
+                      <span class="urgency-title">⚡ Express</span>
+                      <span class="urgency-impact-pill pill-express">Urgente</span>
+                    </div>
+                    <div class="fw-bold text-dark small mb-1">24 a 48 horas</div>
+                    <p class="text-muted mb-0" style="font-size: 11.5px;">Máxima prioridad. Máquinas asignadas de inmediato.</p>
+                  </div>
+                </label>
+
+                <!-- Prioritario -->
+                <label class="urgency-option">
+                  <input type="radio" name="tiempo_entrega" value="prioritario">
+                  <div class="urgency-card-ui">
+                    <div class="urgency-header">
+                      <span class="urgency-title">🚀 Prioritario</span>
+                      <span class="urgency-impact-pill pill-priority">Rápido</span>
+                    </div>
+                    <div class="fw-bold text-dark small mb-1">3 a 5 días</div>
+                    <p class="text-muted mb-0" style="font-size: 11.5px;">Producción acelerada preferencial.</p>
+                  </div>
+                </label>
+
+                <!-- Estándar -->
+                <label class="urgency-option">
+                  <input type="radio" name="tiempo_entrega" value="estandar" checked>
+                  <div class="urgency-card-ui">
+                    <div class="urgency-header">
+                      <span class="urgency-title">📅 Estándar</span>
+                      <span class="urgency-impact-pill pill-standard">Óptimo</span>
+                    </div>
+                    <div class="fw-bold text-dark small mb-1">1 a 2 semanas</div>
+                    <p class="text-muted mb-0" style="font-size: 11.5px;">Tiempo regular. El costo base más equilibrado.</p>
+                  </div>
+                </label>
+
+                <!-- Flexible -->
+                <label class="urgency-option">
+                  <input type="radio" name="tiempo_entrega" value="flexible">
+                  <div class="urgency-card-ui">
+                    <div class="urgency-header">
+                      <span class="urgency-title">🌱 Flexible</span>
+                      <span class="urgency-impact-pill pill-flexible">Económico</span>
+                    </div>
+                    <div class="fw-bold text-dark small mb-1">+2 semanas</div>
+                    <p class="text-muted mb-0" style="font-size: 11.5px;">Sin prisa. Ideal para lotes y máximo ahorro.</p>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Banner de feedback dinámico -->
+              <div id="urgency-feedback-banner" class="time-cost-banner banner-standard">
+                <!-- Inyectado por quote-engine.js -->
+              </div>
+
+              <!-- ACCIONES DE ENVÍO -->
+              <div class="mt-4 pt-3 border-top">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <button type="submit" class="btn btn-primary-custom w-100 py-3">
+                      <i class="fas fa-paper-plane me-1"></i> Enviar por Correo
+                    </button>
+                    <div class="text-center mt-2 small text-muted" style="font-size: 11.5px;">
+                      Respuesta formal en menos de 24 horas.
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <button type="button" id="btn-cotizar-whatsapp" class="btn-whatsapp-custom w-100 py-3">
+                      <i class="fab fa-whatsapp me-1"></i> Consultar por WhatsApp
+                    </button>
+                    <div class="text-center mt-2 small text-muted" style="font-size: 11.5px;">
+                      Chat directo con tu ficha técnica precargada.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: SIDEBAR DE CONTACTO ELEGANTE (UNA SOLA TARJETA COMPACTA) -->
+        <div class="col-lg-4">
+          <div class="contact-sidebar-card">
+            
+            <div class="taller-status-badge">
+              <span class="status-dot"></span> Taller Activo • Respuesta Rápida
+            </div>
+
+            <h5 class="fw-bold text-primary mb-2">¿Prefieres atención directa?</h5>
+            <p class="small text-muted mb-4">
+              Si tienes una pieza rota física o un video del problema, escríbenos directamente por WhatsApp para una revisión inmediata sin costo.
+            </p>
+
+            <a href="https://wa.me/18494622228" target="_blank" class="btn btn-whatsapp-custom w-100 mb-4 py-3">
+              <i class="fab fa-whatsapp me-1 fs-5"></i> Escribir al WhatsApp
+            </a>
+
+            <div class="contact-quick-item">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <div class="small text-muted">Llamadas directas</div>
+                <a href="tel:+18494622228" class="fw-bold text-dark text-decoration-none">(849) 462-2228</a>
+              </div>
+            </div>
+
+            <div class="contact-quick-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <div class="small text-muted">Correo electrónico</div>
+                <a href="mailto:info.aimprimir3d@gmail.com" class="fw-bold text-dark text-decoration-none small">info.aimprimir3d@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-quick-item">
+              <i class="fas fa-truck-fast"></i>
+              <div>
+                <div class="small text-muted">Cobertura y Despachos</div>
+                <div class="small fw-semibold text-dark">Bahoruco, Barahona, Sto. Dgo. y envíos a todo el país.</div>
+              </div>
+            </div>
+
+            <div class="contact-quick-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <div class="small text-muted">Horario de Taller</div>
+                <div class="small text-dark">Lunes a Sábado: 8:00 AM - 7:00 PM</div>
+              </div>
+            </div>
+
+            <div class="confidential-pill">
+              <i class="fas fa-lock text-primary fs-5"></i>
+              <div>
+                <strong>Confidencialidad Garantizada</strong><br>
+                Tus diseños y archivos no se comparten con terceros.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 mb-3">
+          <img src="assets/img/logonombre.png" alt="AIMPRIMIR3D" width="200" class="mb-3" style="filter: brightness(0) invert(1);">
+          <p class="small text-light">
+            Taller especializado en diseño, prototipado y fabricación aditiva de precisión. Transformamos necesidades mecánicas, proyectos y conceptos en piezas reales en República Dominicana.
+          </p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="https://www.instagram.com/aimprimir3d/" target="_blank" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/18494622228" target="_blank" class="text-white fs-5"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5>Navegación</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios y Materiales</a></li>
+            <li><a href="https://www.instagram.com/aimprimir3d?vrfl=MWt5dHZ5N2p3MTFwYQ%3D%3D" target="_blank" rel="noopener">Portafolio (Instagram)</a></li>
+            <li><a href="tienda.html">Tienda / Catálogo</a></li>
+            <li><a href="contacto.html">Contacto y Cotizador</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5>Especialidades</h5>
+          <ul class="footer-links">
+            <li><a href="servicios.html#mecanica">Repuestos de Maquinaria</a></li>
+            <li><a href="servicios.html#prototipado">Prototipado Rápido</a></li>
+            <li><a href="servicios.html#ingenieria">Ingeniería Inversa CAD</a></li>
+            <li><a href="servicios.html#materiales">Guía de Materiales Técnicos</a></li>
+            <li><a href="tienda.html">Lotes y Artículos Personalizados</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5>Atención y Taller</h5>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Provincia Bahoruco, Neiba, Barahona y envíos nacionales a toda RD.</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+18494622228">(849) 462-2228</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info.aimprimir3d@gmail.com">info.aimprimir3d@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span>Lun a Sáb: 8:00 AM - 7:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          © <span id="current-year">2026</span> AIMPRIMIR3D. Todos los derechos reservados.
+        </div>
+        <div class="small">
+          Diseñado con estándares modernos de ingeniería y usabilidad.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/18494622228" target="_blank" rel="noopener" class="whatsapp-float-btn" title="Contactar por WhatsApp">
+    <div class="pulse-ring"></div>
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/quote-engine.js"></script>
+</body>
+</html>
